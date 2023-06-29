@@ -10,7 +10,7 @@ resource "aws_ecs_task_definition" "flask_app_demo" {
   [
     {
         "name": "flask-app-demo",
-        "image": "${var.image_repo_url}:${var.image_tag}",
+        "image": "${aws_ecr_repository.app_ecr.repository_url}",
         "essential": true,
         "portMappings": [
             {
