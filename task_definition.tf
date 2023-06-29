@@ -2,8 +2,8 @@ resource "aws_ecs_task_definition" "flask_app_demo" {
   family                   = "flask-app-demo"
   network_mode             = "awsvpc"
   requires_compatibilities = ["FARGATE"]
-  cpu                      = "512"
-  memory                   = "2048"
+  cpu                      = "256"
+  memory                   = "512"
   execution_role_arn = aws_iam_role.ecsTaskExecutionRole.id
 
   container_definitions = <<DEFINITION
