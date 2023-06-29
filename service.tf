@@ -3,7 +3,7 @@ resource "aws_ecs_service" "flask_app_demo" {
   cluster         = aws_ecs_cluster.aws-ecs-cluster.id
   task_definition = aws_ecs_task_definition.flask_app_demo.arn
   desired_count   = 1
-  launch_type     = "EC2"
+  launch_type     = "FARGATE"
   network_configuration {
     subnets         = []
     security_groups = [aws_security_group.flask_app_demo.id]
