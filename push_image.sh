@@ -1,4 +1,4 @@
-#!/bin/bash
+/bin/bash
 
 repository_url=$1
 
